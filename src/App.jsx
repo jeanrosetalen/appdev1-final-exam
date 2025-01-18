@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react'
+import { TodoProvider } from './context/TodoContext';
+import TodoList from './components/TodoList';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <h1>Samahan nawa sa Practical Exam!!</h1>
-    </>
-  )
-}
+    <div>
+      <h1>Todo App</h1>
+      {/* 
+        TODO: Use the TodoProvider to wrap the TodoList and provide context
+      */}
+      <TodoProvider>
+        <TodoList />
+      </TodoProvider>
+    </div>
+  );
+};
 
-export default App
+export default App;
