@@ -26,7 +26,7 @@ export const TodoProvider = ({ children }) => {
 
 
     const addTodo = (todo) => {
-        setTodos([...todos, {id: todos.id, title: todo, completed: false}])
+        setTodos([...todos, {id: todos.length + 1, title: todo, completed: false}])
     };
 
     const deleteTodo = (id) => {
